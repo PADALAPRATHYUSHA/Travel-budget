@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator | Travel Budget Planner</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(120deg,#e0f7fa,#fff3e0);color:#333;}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 50px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.logo{font-size:1.5rem;font-weight:700;color:#00838f;}
+nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#00838f;}
+.container{max-width:600px;margin:50px auto;background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+h1{text-align:center;color:#006064;margin-bottom:20px;}
+label{display:block;margin-top:15px;font-weight:500;}
+input,select{width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:6px;}
+button{margin-top:20px;width:100%;padding:12px;background:#00838f;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;}
+button:hover{background:#006064;}
+#result{margin-top:20px;font-size:1.2rem;text-align:center;font-weight:600;color:#004d40;}
+footer{text-align:center;padding:20px;font-size:.9rem;color:#555;background:#fff;box-shadow:0 -2px 6px rgba(0,0,0,0.05);}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🌍 Travel Budget Planner</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Travel Budget Calculator</h1>
+  <label>Destination:</label><input type="text" id="destination">
+  <label>Number of Travelers:</label><input type="number" id="people" min="1">
+  <label>Days of Trip:</label><input type="number" id="days" min="1">
+  <label>Accommodation:</label>
+  <select id="stay">
+    <option value="1000">Budget</option>
+    <option value="2000">Standard</option>
+    <option value="3500">Luxury</option>
+  </select>
+  <label>Travel Mode:</label>
+  <select id="mode">
+    <option value="1500">Flight</option>
+    <option value="800">Train</option>
+    <option value="400">Bus</option>
+    <option value="600">Car</option>
+  </select>
+  <button onclick="calculate()">Calculate Budget</button>
+  <div id="result"></div>
+</div>
+
+<footer>© 2025 Travel Budget Planner | Designed by Prathyusha Padala</footer>
+
+<script>
+function calculate(){
+  let people=parseInt(document.getElementById('people').value)||1;
+  let days=parseInt(document.getElementById('days').value)||1;
+  let stay=parseInt(document.getElementById('stay').value);
+  let mode=parseInt(document.getElementById('mode').value);
+  let total=(stay*days*people)+(mode*people);
+  document.getElementById('result').innerText="Estimated Budget: ₹"+total.toLocaleString();
+}
+</script>
+<form method="POST" action="/calculate"></form>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Travel Budget Planner</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(120deg,#e0f7fa,#fff3e0);color:#333;}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 50px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.logo{font-size:1.5rem;font-weight:700;color:#00838f;}
+nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#00838f;}
+.contact{max-width:500px;margin:60px auto;background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+h1{text-align:center;color:#006064;margin-bottom:20px;}
+label{display:block;margin-top:15px;font-weight:500;}
+input,textarea{width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:6px;}
+button{margin-top:20px;width:100%;padding:12px;background:#00838f;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;}
+button:hover{background:#006064;}
+footer{text-align:center;padding:20px;font-size:.9rem;color:#555;background:#fff;box-shadow:0 -2px 6px rgba(0,0,0,0.05);}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🌍 Travel Budget Planner</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="contact">
+  <h1>Contact Us</h1>
+  <label>Name:</label><input type="text" id="name">
+  <label>Email:</label><input type="email" id="email">
+  <label>Message:</label><textarea rows="4" id="msg"></textarea>
+  <button onclick="sendMessage()">Send Message</button>
+  <p id="response" style="text-align:center;margin-top:15px;color:#006064;"></p>
+</div>
+
+<footer>© 2025 Travel Budget Planner | Designed by Prathyusha Padala</footer>
+
+<script>
+function sendMessage(){
+  document.getElementById('response').innerText="Thank you! We'll get back to you soon.";
+}
+</script>
+</body>
+</html>

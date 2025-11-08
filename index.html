@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Budget Planner</title>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  color:#fff;
+  height:100vh;
+  overflow-x:hidden;
+}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 50px;background:rgba(255,255,255,0.15);
+  box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+}
+.logo{
+  font-size:1.6rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;
+}
+.logo i{color:#ffcc00;}
+nav a{
+  margin:0 15px;text-decoration:none;color:#fff;font-weight:500;
+  transition:.3s;display:inline-flex;align-items:center;gap:6px;
+}
+nav a:hover{color:#ffcc00;}
+.hero{
+  height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:0 20px;background:rgba(0,0,0,0.4);
+}
+.hero h1{font-size:3rem;color:#ffcc00;margin-bottom:15px;text-shadow:2px 2px 6px #000;}
+.hero p{max-width:600px;font-size:1.1rem;margin-bottom:25px;color:#f0f0f0;}
+.hero button{
+  padding:12px 24px;background:#ffcc00;color:#000;border:none;
+  border-radius:8px;cursor:pointer;font-weight:600;transition:.3s;
+}
+.hero button:hover{background:#e6b800;}
+footer{
+  text-align:center;padding:15px;font-size:.9rem;color:#fff;
+  background:rgba(0,0,0,0.5);position:fixed;width:100%;bottom:0;
+}
+.fade-in{opacity:0;transform:translateY(20px);transition:all 1.2s ease;}
+.fade-in.active{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><i class="fa-solid fa-earth-americas"></i> Travel Budget Planner</div>
+  <nav>
+    <a href="index"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="calculator"><i class="fa-solid fa-calculator"></i> Calculator</a>
+    <a href="contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <a href="login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    <a href="register"><i class="fa-solid fa-user-plus"></i> Register</a>
+  </nav>
+</header>
+
+<section class="hero fade-in">
+  <h1>Plan Your Perfect Trip Within Budget</h1>
+  <p>Estimate travel expenses effortlessly — from flights to food, stay, and activities — all in one smart platform.</p>
+  <button onclick="location.href='calculator.html'">Start Planning</button>
+</section>
+
+<footer>© 2025 Travel Budget Planner | Designed by Prathyusha Padala</footer>
+
+<script>
+// smooth fade-in animation
+window.addEventListener("load",()=>{
+  document.querySelector('.hero').classList.add('active');
+});
+</script>
+</body>
+</html>

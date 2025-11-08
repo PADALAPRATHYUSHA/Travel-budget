@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Travel Budget Planner</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  display:flex;justify-content:center;align-items:center;height:100vh;
+  font-family:'Poppins',sans-serif;
+}
+.container{
+  background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);
+  padding:40px;border-radius:12px;color:#fff;width:320px;text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+h2{margin-bottom:20px;}
+input{
+  width:100%;padding:10px;margin:10px 0;border:none;border-radius:8px;
+}
+button{
+  width:100%;padding:12px;background:#ffcc00;color:#000;
+  border:none;border-radius:8px;font-weight:600;cursor:pointer;
+}
+button:hover{background:#e6b800;}
+a{color:#fff;text-decoration:none;font-size:.9rem;}
+a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Login</h2>
+  <input type="email" placeholder="Email" id="email">
+  <input type="password" placeholder="Password" id="password">
+  <button onclick="login()">Login</button>
+  <p>Don't have an account? <a href="register.html">Register</a></p>
+</div>
+<script>
+function login(){
+  alert("Login successful (demo)");
+  window.location.href="index";
+}
+</script>
+<form method="POST" action="/login">
+</form>
+</body>
+</html>
